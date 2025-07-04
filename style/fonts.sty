@@ -1,0 +1,33 @@
+%%% Fonts %%%
+
+\setmainfont[
+    BoldFont={verdana-bold},
+    ItalicFont={verdana-italic},
+    BoldItalicFont={verdana-bold-italic}
+]{verdana} % Set main font to Verdana
+ 
+%%% Style %%%
+
+\renewcommand{\normalsize}{\fontsize{7pt}{9pt}\selectfont}
+\AtBeginDocument{\normalsize}
+
+\renewcommand{\footnotesize}{\fontsize{5pt}{6pt}\selectfont} % Footnote size
+
+\setlength{\parskip}{6pt} % Add spacing between paragraphs
+
+\setlength{\parindent}{0pt} % Disable indentation
+
+\setlist[itemize]{
+    noitemsep,
+    topsep=0pt,
+    leftmargin=3mm
+} % Itemize list settings
+
+%%% Hyphenation Settings %%%
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+%%% Column Separation %%%
+\setlength{\columnsep}{20pt} % Adjust column spacing

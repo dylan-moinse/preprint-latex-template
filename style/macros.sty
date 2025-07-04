@@ -1,0 +1,15 @@
+%%% Markdown-style Quote Block Implementation in LaTeX %%%
+
+\newtcolorbox[auto counter,number within=section]{block}[1][]{
+    enhanced jigsaw, % Improved box flexibility
+    frame hidden, % Hide the default frame
+    colback=white, % Set background color to white
+    coltitle=#1, % Title color based on input
+    fonttitle=\bfseries\itshape, % Bold and italic title font
+    sharp corners, % Use sharp box corners
+    detach title, % Detach title for custom positioning
+    borderline west={.85mm}{0pt}{#1}, % Add a colored vertical border on the left
+    pad at break=1mm, % Adjust padding when breaking across pages
+    title={\ifstrequal{#1}{todo}{To-Do}{\capitalisewords{#1}}}, % Conditional title formatting
+    code={\ifdefempty{\tcbtitletext}{}{\tcbset{before upper={\tcbtitle\par\medskip}}}} % Display title before content if not empty
+}

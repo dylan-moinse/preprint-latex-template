@@ -1,0 +1,52 @@
+%%% Main LaTeX Document %%%
+\documentclass[
+    language=english,
+]{preprint}
+    
+\usepackage{etoolbox} % Utility package for conditional compilation
+
+\hypersetup{pdfauthor={Dylan Moinse}}
+\begin{document}
+
+
+%%% --- Title --- %%%
+\subfile{sections/00-titlepage}
+
+
+%%% --- Body --- %%%
+\linenumbers % Section.Line numbering
+
+% Introduction
+\subfile{sections/01-introduction}
+
+% Study Area
+\subfile{sections/02-study-area}
+
+% Materials and Methods
+\subfile{sections/03-methods}
+
+% Results and Discussion
+\subfile{sections/04-results}
+
+% Conclusion
+\subfile{sections/05-conclusion}
+
+
+%%% --- Information --- %%%%
+
+% Credit
+\subfile{sections/06-contribution}
+
+% Acknowledgements
+\subfile{sections/07-acknowledgements}
+
+% Data availability
+\subfile{sections/08-data}
+
+% Bibliography
+\subfile{sections/09-bib}
+
+% Credit
+\subfile{sections/10-appendices}
+
+\end{document}

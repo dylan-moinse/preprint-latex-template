@@ -1,0 +1,75 @@
+%%% Title %%%
+\documentclass[../main.tex]{subfiles}
+
+    \begin{document}
+
+\hypersetup{
+    pdftitle={LaTeX Template for a Scientific Preprint Article},
+    pdfsubject={Scientific Writing, Preprint, Academic Publishing},
+    pdfkeywords={LaTeX, Template, Scientific Article, Preprint, Academic Writing, Research Paper, Overleaf, Open Science}
+}
+
+
+\begin{titlepage}
+    \pagenumbering{gobble} % Temporarily hides the page numbering
+    \thispagestyle{plain} % Removes header and footer
+    \topskip=0pt
+    \centering
+    %\vspace*{3cm} % Adjusts the space before the title
+
+    {\Large \bfseries LaTeX Template for a Scientific Preprint Article
+    \\[0.8cm]} % Large, bold title
+
+    \begin{flushleft} % Justifies the authors' names and affiliations
+    {\small
+    Dylan Moinse\textsuperscript{1},
+    Author 2\textsuperscript{2},
+    Author 3\textsuperscript{3},
+    \\[0.3cm]} % Authors' names
+
+    {\scriptsize
+    \textsuperscript{1} Department of Operations, Faculty of Business and Economics (HEC Lausanne), University of Lausanne, Lausanne, Switzerland % Affiliation 1
+    \\
+    \textsuperscript{2} Department, University, City, Country % Affiliation 2
+    \\
+    \textsuperscript{3} Department, University, City, Country % Affiliation 3
+    \\[1cm]}
+    
+    \end{flushleft}
+    
+    \rule{\textwidth}{0.1pt}
+    \\[0.4cm]
+    \begin{abstract}
+        \noindent
+        \scriptsize{
+        \lipsum[1-3]
+        }
+    \end{abstract}
+    \rule{\textwidth}{0.1pt}
+    \\[0.6cm]
+
+    \begin{flushleft} % Justifies the authors' names and affiliations
+    \textbf{Keywords:}
+    LaTeX;
+    Template;
+    Scientific Article;
+    Preprint;
+    Academic Writing;
+    Research Paper;
+    Overleaf;
+    Open Science
+    \end{flushleft}
+
+    % ToC
+% \tableofcontents % Table of contents if needed
+
+    %\vfill % Vertical fill to balance the page layout
+
+\end{titlepage}
+
+%\clearpage % Moves to the next page
+\pagenumbering{arabic} % Restores normal page numbering
+\setcounter{page}{1} % Starts numbering at 1
+\pagestyle{fancy} % Reapplies the fancy style
+
+    \end{document}

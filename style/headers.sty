@@ -1,0 +1,66 @@
+%%% Header adjustment %%%
+
+% Apply fancy style globally
+\pagestyle{fancy}
+
+% Clear all default headers and footers
+\fancyhf{}
+
+% Remove the line
+%\renewcommand{\headrulewidth}{0pt}
+
+% Spacing with text
+%\setlength{\headsep}{3cm}
+
+% Left
+\fancyhead[L]{
+    \raisebox{2\height}{
+    \scriptsize{\textcolor{gray}{
+        \today
+    }}
+    }
+}
+
+% Center
+\fancyhead[C]{
+    \raisebox{2\height}{
+    \textsl{\textbf{\scriptsize{\textcolor{gray}{
+        Preprint
+    }}}}
+    }
+}
+
+% Right
+\fancyhead[R]{
+    \includegraphics[width=0.1\textwidth]{logos/logo-elsevier.png} % Elsevier
+}
+
+% Custom head rule (same color, same width but stops before the image)
+\renewcommand{\headrulewidth}{0pt} % Disable default line
+\makeatletter
+\def\headrule{
+    \vspace{-0.6cm} % Move line higher
+    \noindent\makebox[\textwidth][l]{ % Create a limited-width rule
+        \textcolor{gray}{\rule{0.8\textwidth}{0.1pt}} % Gray rule, 85% of text width
+    }
+    \vspace{5pt} % Adjust spacing below the rule
+}
+\makeatother
+
+% % Force fancyhdr on title page
+% \fancypagestyle{plain}{ % Redefine plain style (used by maketitle)
+%     \fancyhf{} % Clear headers and footers
+%     \fancyhead[L]{
+%         \raisebox{2\height}{\scriptsize{\textcolor{gray}{\today}}}
+%     }
+%     \fancyhead[C]{
+%         \raisebox{2\height}{
+%         \textsl{\textbf{\scriptsize{\textcolor{gray}{Preprint}}}}}
+%     }
+%     \fancyhead[R]{
+%         \includegraphics[width=0.1\textwidth]{logos/logo-elsevier.png} % Elsevier logo
+%     }
+%     \renewcommand{\headrulewidth}{0pt} % Disable default line
+% }
+
+\pagestyle{fancy} % Apply fancy style globally

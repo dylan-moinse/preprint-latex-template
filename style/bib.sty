@@ -1,0 +1,58 @@
+%%% Bibliography Settings %%%
+
+\usepackage[
+  backend=biber, % Biber for bibliography processing
+  style=authoryear, % Author-year citation style
+  citestyle=authoryear, % Author-year in-text citations
+  hyperref=true, % Enable hyperlinks in citations
+  url=true, % Display URLs when relevant
+  isbn=true, % Include ISBN for books
+  doi=true, % Display DOIs when available
+  giveninits=false, % Use full first names instead of initials
+  maxcitenames=2, % Number of authors before using "et al." in text
+  maxbibnames=50, % Number of names in the bibliography before truncating
+  backref=true, % Enable back references to citation pages
+  natbib=true,% Ensure natbib compatibility
+  % refsection=chapter, % Manage separate bibliographies per chapter
+  sorting=nyt,
+]{biblatex}
+
+\DeclareNameAlias{sortname}{family-given}
+\DeclareNameAlias{default}{family-given}
+
+\AtEveryBibitem{\clearfield{month}\clearfield{day}} % Removing month and day from bibliography entries
+
+% Display the DOI if available; otherwise, it displays the URL.
+\renewbibmacro*{doi+eprint+url}{%
+  \iftoggle{bbx:doi}
+    {\iffieldundef{doi}{ % If DOI is not defined
+       \iftoggle{bbx:url}
+         {\usebibmacro{url+urldate}} % Display the URL instead
+         {}
+     }{ % If DOI is available
+       \printfield{doi} % Print DOI
+     }}
+    {}
+}
+
+% Backreferences
+\DefineBibliographyStrings{english}{%
+  backrefpage = {cited on page}, % "cited on page"
+  backrefpages = {cited on pages}, % "cited on pages"
+}
+
+% Load the bibliography file
+\addbibresource{ref.bib}
+
+% Print bib colors and size
+\AtBeginBibliography{
+    \hypersetup{urlcolor=gray, linkcolor=gray} % Hypperlink
+    \color{black} % Font
+    \scriptsize % Size
+}
+
+\setlength{\bibitemsep}{5pt} % Spacing
+
+\AtBeginBibliography{%
+  \renewcommand*{\mkbibnamefamily}[1]{\textbf{#1}} % Bold surname
+}

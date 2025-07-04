@@ -1,0 +1,34 @@
+%% Footer adjustment %%%
+
+\fancyfoot[L]{
+    \textsl{\scriptsize{\textcolor{gray}{
+        Preprint submitted to...
+    }}}
+} % Left-aligned text
+
+\fancyfoot[R]{
+    \scriptsize{
+    \textbf{\textcolor{gray}{\thepage}}/{\the\numexpr\getpagerefnumber{LastPage}\relax}
+    }
+} % Page number aligned to the right
+
+% Thin gray rule above the footer
+\renewcommand{\footrulewidth}{0.1pt} % Reduce footer rule thickness
+\renewcommand{\footrule}{
+    \hrule height 0.1pt \color{gray} % Create the gray rule
+}
+
+% % Apply same style for chapter pages
+% \fancypagestyle{plain}{
+%     \fancyhf{}
+%     \fancyfoot[L]{
+%     \textsl{\scriptsize{\textcolor{gray}{
+%         Preprint submitted to Journal of Transport Geography
+%     }}}
+%     }
+%     \fancyfoot[R]{
+%     \scriptsize{
+%     \textbf{\textcolor{gray}{\thepage}}/{\the\numexpr\getpagerefnumber{LastPage}\relax}
+%     }
+% }
+% }

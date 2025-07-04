@@ -1,0 +1,70 @@
+%%% 10- Appendices %%%
+\documentclass[../main.tex]{subfiles}
+
+    \begin{document}
+
+    \newpage
+    \onecolumn
+    \appendix
+
+\section*{Appendices}
+    \addcontentsline{toc}{section}{Appendices}
+    \label{section:appendices}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \section*{Appendix~A.}
+\addtocounter{section}{2}
+\renewcommand{\thesection}{\arabic{section}}
+    \label{appendix:1}
+
+    % Lipsum 1
+\lipsum[1-3]
+
+    % Fig 3
+    \begin{figure}[h!] % Column
+    \centering
+\includegraphics[width=0.5\columnwidth]{fig/fig-3.jpg}
+\caption{Caption Fig.~3}
+    \label{fig:3}
+    \begin{flushright}
+    \begin{minipage}{1\linewidth}
+        \justifying
+        \noindent
+\tiny{\textcolor{gray}{Source: Moinse (2024)}}
+        \end{minipage}
+    \end{flushright}
+    \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \section*{Appendix~B.}
+\addtocounter{section}{1}
+\renewcommand{\thesection}{\arabic{section}}
+    \label{appendix:2}
+
+    % Lipsum 1
+\lipsum[1-3]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \section*{Appendix~C.}
+\addtocounter{section}{2}
+\renewcommand{\thesection}{\arabic{section}}
+    \label{appendix:3}
+
+    % Lipsum 1
+\lipsum[1-3]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \section*{Appendix~D.}
+\addtocounter{section}{3}
+\renewcommand{\thesection}{\arabic{section}}
+    \label{appendix:4}
+
+    % Lipsum 2
+\lipsum[1-3]
+
+    \end{document}

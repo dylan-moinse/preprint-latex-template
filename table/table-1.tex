@@ -1,0 +1,44 @@
+%%% Table indicators %%%
+
+    \begin{table}[h!]
+    \centering
+    \scriptsize
+    \renewcommand{\arraystretch}{1.5}
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{p{0.5\columnwidth}p{0.5\columnwidth}}
+    \rule{0pt}{15pt}
+    \small{\textbf{\textcolor{elsevier}{Column~1}}} & \small{\textcolor{elsevier}{\textbf{Column~2}}}\\
+        \hline
+
+    \multicolumn{2}{l}{\textbf{Subtitle}}\\
+
+Line~1.1 & Line~1.2\\
+Line~2.1 & Line~2.2\\
+Line~3.1 & Line~3.2\\
+
+    \hdashline
+    \multicolumn{2}{l}{\textbf{Subtitle}}\\
+
+Line~4.1 & Line~4.2\\
+Line~5.1 & Line~5.2\\
+Line~6.1 & Line~6.2\\
+
+    \hdashline
+    \multicolumn{2}{l}{\textbf{Subtitle}}\\
+
+Line~7.1 & Line~7.2\\
+Line~8.1 & Line~8.2\\
+Line~9.1 & Line~9.2\\
+
+        \hline
+        \end{tabular}}
+    \caption{Caption Table.~1}
+    \label{table:1}
+    \begin{flushright}
+    \begin{minipage}{1\linewidth}
+        \justifying
+        \noindent
+\tiny{\textcolor{gray}{Authors (2025)}}
+        \end{minipage}
+    \end{flushright}
+        \end{table}

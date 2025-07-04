@@ -1,0 +1,13 @@
+*LaTeX Template for Scientific Preprints*
+
+This project provides a lightweight and customizable LaTeX template for writing scientific preprints, independent of any specific journal design. It is meant to offer a clean, professional structure for sharing research work before formal submission or publication.
+
+A fictional example article is included with typical sections, following a two-column format, filled with placeholder text (\lipsum) to showcase the visual rendering.
+
+---
+
+*Contact*
+
+For any questions, suggestions, or improvements, feel free to contact the author: Dylan Moinse
+dylan.moinse@unil.ch
+GitHub — dylan-moinse

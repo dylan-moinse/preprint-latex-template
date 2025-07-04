@@ -1,0 +1,13 @@
+%%% Section formatting %%%
+
+\setcounter{tocdepth}{1} % ToC only with sections
+
+\renewcommand\thesection{---\arabic{section}~} % --- before section
+\renewcommand{\numberline}[1]{#1\ } % ToC
+
+\titleformat{\subsection}
+  {\normalfont\fontsize{11}{13}\selectfont\bfseries\raggedright} % Left-align only for subsections
+  %{} % No numbering
+  %{0pt} % Spacing before the title
+  %{} % Code before the title text
+  {\thesubsection}{0.5em}{}  %fix by AI suggestion
